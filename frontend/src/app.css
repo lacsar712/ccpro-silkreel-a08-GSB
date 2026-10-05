@@ -13,12 +13,28 @@ body {
   background: radial-gradient(circle at 50% 20%, #fff8e8, var(--paper));
   color: var(--ink);
 }
-.login, .yard {
+.login {
   max-width: 920px;
   margin: 0 auto;
   padding: 32px 20px 60px;
 }
+.shell {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
 h1 { font-weight: 600; letter-spacing: 0.08em; }
+.shell h1 { font-size: 1.5em; margin: 0 0 8px; }
+.tabs { display: flex; gap: 8px; }
+.tab {
+  margin: 0 6px 0 0;
+  border: 1px solid #c8b98e;
+  background: #fbf6ea;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.tab.active { background: var(--gold); color: #fff; border-color: var(--gold); }
+.who { display: flex; align-items: center; gap: 10px; white-space: nowrap; }
 .ring {
   position: relative;
   width: min(72vw, 640px);
@@ -60,4 +76,44 @@ button, input {
 .err { color: #b42318; }
 .hint { color: #6b5a48; font-size: 0.92em; }
 label { display: block; margin: 8px 0; }
-.topbar { display: flex; justify-content: space-between; align-items: baseline; }
+.topbar { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.cl-ok { color: #2f6b42; }
+.cl-okish { color: #2f6b42; }
+.cl-low { color: #b42318; }
+.cl-void-tag { color: #8a6d3b; }
+.chlorine { margin-top: 18px; }
+.day-bar label { display: inline-flex; align-items: center; gap: 8px; }
+.cl-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 14px;
+  background: #fff;
+  border: 1px solid #e4d8bf;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin: 12px 0;
+}
+.cl-form label { margin: 0; }
+.cl-list { list-style: none; padding: 0; margin: 8px 0; }
+.cl-row {
+  background: #fff;
+  border: 1px solid #e4d8bf;
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin: 8px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 16px;
+}
+.cl-main { display: flex; gap: 12px; align-items: center; min-width: 160px; }
+.cl-meta { flex: 1; color: #6b5a48; font-size: 0.92em; }
+.cl-row.voided { opacity: 0.62; }
+.btn-void {
+  border-color: #b42318;
+  color: #b42318;
+  background: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
